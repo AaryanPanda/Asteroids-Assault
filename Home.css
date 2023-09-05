@@ -1,0 +1,121 @@
+body {
+    background-image: url(./Assets/SpaceBg.png);
+    background-size: cover; 
+    background-repeat: no-repeat;  
+}
+
+#game-bar {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+#game-logo {
+    height: 250px;
+    width: 250px;
+    background: none;
+    padding-right: 30px; 
+}
+
+#game-name {
+    font-size: large;
+    color: rgb(233, 142, 5);
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    font-weight: bolder;
+    background: linear-gradient(360deg,  #FF4500,#FFD700, #FF4500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-weight: bolder;
+    word-spacing: 50px;
+}
+
+.content {
+    margin-top: 30px;
+    height: 150px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input {
+    height: 50px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    border: black solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input input[type="text"] {
+    height: 30px;
+    width: 280px;
+    outline: none;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    font-family: 'Roboto Serif', serif; 
+    font-weight: 900; 
+    text-align: center;
+    color: rgb(56, 56, 56);
+}
+
+.input input[type="text"]::placeholder {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+.buttons{
+    width: 100%;
+    height: 220px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#start {
+    height: 50px;
+    width: 120px;
+    font-family: 'Holtwood One SC', serif;
+    border-radius: 50px;
+    border: 4px solid black;
+    font-size: 24px;
+    /* background-color: rgb(219, 191, 191); */
+    background-color: rgb(189, 189, 166);
+    color: blue;
+}
+
+#instructions {
+    height: 35px;
+    width: 200px;
+    font-size: 16px;
+    border-radius: 20px;
+    background-color: rgb(245, 212, 152);
+    color: rgb(151, 1, 1);
+    font-weight: 600;
+    border: 2px solid black;
+}
+
+.footer {
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    color: #dad9d9;
+    font-size: 40px;
+    font-family: 'Kiwi Maru', serif;
+}
