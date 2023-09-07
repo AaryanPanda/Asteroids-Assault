@@ -2,15 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: url("./Assets/cannon.png") 30 30,auto;
 }
 body {    
     background-image: url(./Assets/SpaceBg.png);
     background-size: cover; 
-    background-repeat: no-repeat;   
-    cursor: url("./Assets/LaserCannon.png"), auto;   
+    background-repeat: no-repeat;  
 }
 
 .earth {
+    height: 250px;
+    width: 250px;
     margin-top: 50px;
     display: flex;
     align-items: center;
@@ -23,7 +25,8 @@ body {
     top: 50%;
     left: 50%;
     transform-origin: center;
-    animation: rotate 10s linear infinite;
+    animation: rotate 12s linear infinite;
+    transition: transform 0.5s ease; 
 }
 @keyframes rotate {
     0% {
@@ -42,7 +45,7 @@ body {
 .lives img {
     height: 50px;
     width: 50px;
-    animation: pulse 3s infinite;
+    animation: pulse 0.75s infinite;
     padding:5px;
 }
 .score-board{
@@ -54,19 +57,62 @@ body {
     right: 40px;
     background: linear-gradient(360deg,rgb(100, 100, 100),white);
     box-shadow: 5px 5px 10px rgba(160, 160, 158, 0.619);
-    /* transition: transform 0.3s ease-in-out; */
     border: 0 solid transparent;
     border-radius: 10px;
-
+    color: Black;
+    font-family: 'Sancreek', cursive;
+    font-weight: 800;
 }
+
 @keyframes pulse {
     0% {
-        transform: scale(0.8);
+        transform: scale(1);
     }
     50% {
         transform: scale(1.2);
     }
     100% {
-        transform: scale(0.8);
+        transform: scale(1);
     }
 }
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    background: linear-gradient(180deg,gold,white,gold);
+    font-size: 40px;
+    padding: 20px;
+    border: 3px solid #000000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    height: 100px;
+    width: 600px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.fade-in {
+    animation: fade-in 3s ease-in;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+#display-nick {
+    font-size: 40px;
+    font-family: 'Sancreek', cursive;
+}
+
+
+/* css related to asteroids */

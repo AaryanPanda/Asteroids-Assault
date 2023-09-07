@@ -20,6 +20,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="game-bar">
@@ -28,17 +34,64 @@
     </div>
     <div class="content">
 
-        <div id="username" class="input"><input type="text" placeholder="Enter Username"></div>
-        <div id="nickname" class="input"><input type="text" placeholder="Enter Nickname"></div>
+        <div id="username" class="input"><input id="user" type="text" placeholder="Enter Username"></div>
+        <div id="nickname" class="input"><input id="nick" type="text" placeholder="Enter Nickname"></div>
         
     </div>
 
     <div class="buttons">
 
         <button id="start">Start</button>
+        <div id="reminder-div">
+            <div id="reminder">
+                <span id="close-reminder">&times;</span>
+                <p id="reminder-content">Please fill in both <strong>'Username'</strong>  and <strong>'Nickname'</strong> .</p>
+            </div>
+        </div>
+
         <button id="instructions">INSTRUCTIONS</button>
+        <div id="popup-container" class="popup">
+            <div class="popup-content">
+                <div class="close-button" id="close-button">&times;</div>
+                <div class="instructions-container"><h1 id="popup-name">Asteroids Assault</h1>
+                    <h2>Objective:</h2>
+                    <ul>
+                        <li>Save planet Earth from incoming asteroids by shooting them down with your cannon.</li>
+                        <li>Your cannon is your only defense against the asteroids.</li>
+                        <li>Earn points for each successfully destroyed asteroid.</li>
+                        <li>Try to achieve the highest score with your 3 lives.</li>
+                    </ul>
+
+                    <h2>Controls:</h2>
+                    <ul>
+                        <li>Use your cursor to target the asteroids with cannon.</li>
+                        <li>Click over them to destroy.</li>
+                    </ul>
+
+                    <h2>Scoring:</h2>
+                    <ul>
+                        <li>Earn points for each asteroid you successfully destroy.</li>
+                        <li>The more asteroids you destroy, the higher your score will be.</li>
+                    </ul>
+
+                    <h2>Lives:</h2>
+                    <ul>
+                        <li>You start with 3 lives.</li>
+                        <li>If an asteroid reaches the surface of Earth without being destroyed, you lose 1 life.</li>
+                        <li>The game ends when you run out of lives.</li>
+                    </ul>
+                    
+                    <p id="luck">GOOD LUCK !!!</p>
+
+                </div>
+            </div>
+        </div>
 
     </div>
     <div class="footer"><p>By Aaryan Panda</p></div>
+
+
+
+    <script src="./Home.js"></script>
 </body>
 </html>

@@ -96,8 +96,22 @@ body {
     border: 4px solid black;
     font-size: 24px;
     /* background-color: rgb(219, 191, 191); */
-    background-color: rgb(189, 189, 166);
+    background-color: rgba(189, 189, 166, 0.943);
     color: blue;
+    animation: pulse 2s infinite;
+
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 #instructions {
@@ -109,6 +123,7 @@ body {
     color: rgb(151, 1, 1);
     font-weight: 600;
     border: 2px solid black;
+    cursor: pointer;
 }
 
 .footer {
@@ -118,4 +133,119 @@ body {
     color: #dad9d9;
     font-size: 40px;
     font-family: 'Kiwi Maru', serif;
+}
+/* Styles for the popup container */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Styles for the popup content */
+.popup-content {
+    height: 600px;
+    width: 400px;
+    background-color: #fff;
+    background: linear-gradient(360deg,  #89babe,#ffffff, #595f8c);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+/* Style for the close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-weight: 600;
+    height: 20px;
+    width: 25px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#luck {
+    background: linear-gradient(360deg,rgb(162, 158, 26),black);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Sancreek', cursive;
+    font-weight: 700;
+    font-size: 30px;
+}
+#popup-name{
+    background: linear-gradient(360deg,rgb(162, 158, 26),white,rgb(162, 158, 26));
+    color: brown;
+}
+
+#reminder-div {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#reminder {
+    height: 250px;
+    width: 500px;
+    background-color: #fff;
+    background: linear-gradient(135deg, gray,#ffffff);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+#close-reminder {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 25px;
+    background-color: rgba(126, 104, 87, 0.571);
+    /* background-color: rgba(238, 130, 238, 0.526); */
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+#reminder-content {
+    font-size: 35px;
+    line-height: 60px;
+    color: black;
 }
