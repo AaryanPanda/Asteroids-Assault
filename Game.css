@@ -73,9 +73,13 @@ body {
     box-shadow: 5px 5px 10px rgba(160, 160, 158, 0.619);
     border: 0 solid transparent;
     border-radius: 10px;
-    color: Black;
+    color: rgb(8, 1, 85);
     font-family: 'Sancreek', cursive;
     font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
 }
 
 @keyframes pulse {
@@ -133,23 +137,24 @@ body {
 }
 
 
+
+
 /* css related to asteroids */
 .asteroid-image1 {
     position: absolute;
     bottom: 0;
     width: 100px;
     height: 100px;
-    animation: flying1 6s ease-in-out infinite;
+    animation: flying1 4s ease-in-out infinite;
 }
 
 @keyframes flying1 {
     0% {
         bottom: -50px;
-        ;
     }
 
     100% {
-        bottom: 200px;
+        bottom: 190px;
         transform: translateX(700%);
     }
 }
@@ -159,7 +164,7 @@ body {
     top: 0;
     width: 100px;
     height: 100px;
-    animation: flying2 6s ease-in-out infinite;
+    animation: flying2 5s ease-in-out infinite;
 }
 
 @keyframes flying2 {
@@ -168,45 +173,10 @@ body {
     }
 
     100% {
-        top: 200px;
+        top: 190px;
         transform: translateX(700%);
     }
 }
 
-.asteroid-image3 {
-    position: absolute;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    animation: flying3 6s ease-in-out infinite;
-}
 
-@keyframes flying3 {
-    0% {
-        left: 0;
-    }
 
-    100% {
-        left: 620px;
-        transform: translateY(0%);
-    }
-}
-
-.asteroid-image4 {
-    position: absolute;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    animation: flying4 6s ease-in-out infinite;
-}
-
-@keyframes flying4 {
-    0% {
-        right: 0;
-    }
-
-    100% {
-        right: 620px;
-        transform: translateY(0%);
-    }
-}
