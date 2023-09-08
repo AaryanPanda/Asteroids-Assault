@@ -2,12 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url("./Assets/cannon.png") 30 30,auto;
+    cursor: url("./Assets/cannon.png") 30 30, auto;
+
 }
-body {    
+
+*::selection {
+    color: transparent;
+}
+
+body {
     background-image: url(./Assets/SpaceBg.png);
-    background-size: cover; 
-    background-repeat: no-repeat;  
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
 .earth {
@@ -18,7 +27,8 @@ body {
     align-items: center;
     justify-content: center;
 }
-.earth img{
+
+.earth img {
     height: 250px;
     width: 450px;
     position: absolute;
@@ -26,14 +36,16 @@ body {
     left: 50%;
     transform-origin: center;
     animation: rotate 12s linear infinite;
-    transition: transform 0.5s ease; 
+    transition: transform 0.5s ease;
 }
+
 @keyframes rotate {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
     }
+
     100% {
-        transform: translate(-50%, -50%) rotate(360deg); 
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
@@ -42,20 +54,22 @@ body {
     left: 20px;
     top: 20px;
 }
+
 .lives img {
     height: 50px;
     width: 50px;
     animation: pulse 0.75s infinite;
-    padding:5px;
+    padding: 5px;
 }
-.score-board{
+
+.score-board {
     height: 50px;
     width: 200px;
     background-color: gray;
     position: absolute;
     top: 40px;
     right: 40px;
-    background: linear-gradient(360deg,rgb(100, 100, 100),white);
+    background: linear-gradient(360deg, rgb(100, 100, 100), white);
     box-shadow: 5px 5px 10px rgba(160, 160, 158, 0.619);
     border: 0 solid transparent;
     border-radius: 10px;
@@ -68,9 +82,11 @@ body {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.2);
     }
+
     100% {
         transform: scale(1);
     }
@@ -83,7 +99,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    background: linear-gradient(180deg,gold,white,gold);
+    background: linear-gradient(180deg, gold, white, gold);
     font-size: 40px;
     padding: 20px;
     border: 3px solid #000000;
@@ -99,10 +115,12 @@ body {
 .fade-in {
     animation: fade-in 3s ease-in;
 }
+
 @keyframes fade-in {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -116,3 +134,79 @@ body {
 
 
 /* css related to asteroids */
+.asteroid-image1 {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    animation: flying1 6s ease-in-out infinite;
+}
+
+@keyframes flying1 {
+    0% {
+        bottom: -50px;
+        ;
+    }
+
+    100% {
+        bottom: 200px;
+        transform: translateX(700%);
+    }
+}
+
+.asteroid-image2 {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    animation: flying2 6s ease-in-out infinite;
+}
+
+@keyframes flying2 {
+    0% {
+        top: -50px;
+    }
+
+    100% {
+        top: 200px;
+        transform: translateX(700%);
+    }
+}
+
+.asteroid-image3 {
+    position: absolute;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    animation: flying3 6s ease-in-out infinite;
+}
+
+@keyframes flying3 {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 620px;
+        transform: translateY(0%);
+    }
+}
+
+.asteroid-image4 {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    animation: flying4 6s ease-in-out infinite;
+}
+
+@keyframes flying4 {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: 620px;
+        transform: translateY(0%);
+    }
+}
