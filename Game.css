@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url("./Assets/cannon.png") 30 30, auto;
+    cursor: url("./Assets/Pointer.png") 30 30, auto;
 
 }
 
@@ -30,7 +30,7 @@ body {
 
 .earth img {
     height: 250px;
-    width: 450px;
+    width: 250px;
     position: absolute;
     top: 50%;
     left: 50%;
