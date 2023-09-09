@@ -16,5 +16,5 @@ home.addEventListener('click', function () {
 })
 
 restart.addEventListener('click', function () {
-    window.location.href="game.html"
+    window.location.href="Game.html"
 })
